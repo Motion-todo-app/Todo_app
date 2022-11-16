@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="225f14fb-c39f-4222-a757-339bfc8a1437" name="Changes" comment="feat: BE: TODO-41 List of task and categories only">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668607207297</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: BE: TODO-41 List of task and categories only">
+      <created>1668607459231</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668607459231</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

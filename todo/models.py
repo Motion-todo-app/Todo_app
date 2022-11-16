@@ -14,6 +14,19 @@ class Category(models.Model):
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'
 
+class Status(models.Model):
+    name = models.CharField(_('Status Name'), max_length=200,
+                            blank=False,
+                            null=True,
+                            help_text='Add status of your task.')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Status'
+        verbose_name_plural = 'Status'
+
 class Task(models.Model):
     name = models.CharField(_('What\'s to be done'), max_length=250,
                             blank=False,
