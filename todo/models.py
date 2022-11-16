@@ -46,6 +46,12 @@ class Task(models.Model):
                                  null=True,
                                  blank=False,
                                  help_text='Click the dropdown and select your category.')
+    status = models.ForeignKey(
+        Status,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=False,
+        help_text='Click the dropdown and select your category.')
 
     def __str__(self):
         return self.name
