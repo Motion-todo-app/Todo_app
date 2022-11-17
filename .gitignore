@@ -130,3 +130,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#ignore .idea file added by vs code
+.idea/
