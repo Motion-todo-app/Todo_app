@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _  # renaming variables
+from django.contrib.auth.models import User
 # Create your models here.
 
 class Category(models.Model):
@@ -28,6 +29,7 @@ class Status(models.Model):
         verbose_name_plural = 'Status'
 
 class Task(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(_('What\'s to be done'), max_length=250,
                             blank=False,
                             null=True,
@@ -36,7 +38,7 @@ class Task(models.Model):
                             null=True,
                             blank=False,
                             help_text='Click the box and select date.')
-    time = models.DateField(_('Pick a time'),
+    time = models.TimeField(_('Pick a time'),
                             null=True,
                             blank=False,
                             help_text='Click the box and select time.')
@@ -52,6 +54,8 @@ class Task(models.Model):
         null=True,
         blank=False,
         help_text='Click the dropdown and select your category.')
+
+    assignee = models.ManyToManyField(User, related_name='assignee')
 
     def __str__(self):
         return self.name

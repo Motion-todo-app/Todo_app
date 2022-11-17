@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from todo.models import *
+from .models import *
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:

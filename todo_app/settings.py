@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     # myapp
     'authentication',
     'todo',
-    'rest_framework',
     # third party
+    'rest_framework',
     'django_filters',
 
 ]
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'todo_app.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        "NAME": os.path.join(PROJECT_DIR, "db.sqlite3"),
     }
 }
 
