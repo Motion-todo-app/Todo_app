@@ -29,7 +29,7 @@ class Status(models.Model):
         verbose_name_plural = 'Status'
 
 class Task(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, related_name='user_task', on_delete=models.CASCADE)
     name = models.CharField(_('What\'s to be done'), max_length=250,
                             blank=False,
                             null=True,
@@ -45,12 +45,14 @@ class Task(models.Model):
     category = models.ForeignKey(
                                  Category,
                                  on_delete=models.SET_NULL,
+                                 related_name='task_category',
                                  null=True,
                                  blank=False,
                                  help_text='Click the dropdown and select your category.')
     status = models.ForeignKey(
         Status,
         on_delete=models.SET_NULL,
+        related_name='task_status',
         null=True,
         blank=False,
         help_text='Click the dropdown and select your category.')
