@@ -21,5 +21,8 @@ from django.conf import settings
 urlpatterns = [
     path('motion-admin/', admin.site.urls),
     # path('api/auth/', include("authentication.urls")),
-    # path('api/todo/', include("todo.urls")),
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('api/', include("todo.urls")),
+]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
